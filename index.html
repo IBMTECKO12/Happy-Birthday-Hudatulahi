@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Hudatulahi 🌸</title>
+  <style>
+    /* Background styling */
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, #fff1f2, #ffe4e6, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Floating glowing circles */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      filter: blur(40px);
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    .orb1 {
+      width: 80px;
+      height: 80px;
+      background-color: #f9a8d4;
+      top: 60px;
+      left: 80px;
+    }
+
+    .orb2 {
+      width: 100px;
+      height: 100px;
+      background-color: #fbcfe8;
+      bottom: 80px;
+      right: 100px;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Image */
+    .image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fbcfe8;
+      box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+      object-fit: cover;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 1.2s ease;
+    }
+
+    .image.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Text container */
+    .text-container {
+      max-width: 600px;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1.5s ease;
+    }
+
+    .text-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #be123c;
+      margin-bottom: 10px;
+      font-family: "Playfair Display", serif;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .glow {
+      font-size: 1.5rem;
+      color: #ec4899;
+      font-weight: 600;
+      margin-top: 10px;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        text-shadow: 0 0 5px #f9a8d4, 0 0 10px #f9a8d4, 0 0 20px #f472b6;
+      }
+      50% {
+        text-shadow: 0 0 20px #f472b6, 0 0 30px #f9a8d4, 0 0 40px #f9a8d4;
+      }
+      100% {
+        text-shadow: 0 0 5px #f9a8d4, 0 0 10px #f472b6, 0 0 20px #f472b6;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .glow {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <!-- Replace src with her image -->
+  <img src="hudatulahi.jpg" alt="Hudatulahi" class="image" id="image" />
+
+  <div class="text-container" id="text">
+    <h1>Happy Birthday, Hudatulahi 🌸</h1>
+    <p>
+      A soul of elegance and purpose — a scholar per excellence whose zeal
+      to learn and live by values inspires everyone around her. You embody
+      uprightness, modesty, and grace — proof that true beauty lies in a
+      heart connected to faith.
+    </p>
+    <p>
+      You are one of a kind, a precious gem, and a true friend.
+      May Allah continue to guide your path, bless your intellect, and fill
+      your days with light and serenity.
+    </p>
+    <div class="glow">A True Gem ✨</div>
+  </div>
+
+  <script>
+    // Delay appearance for cinematic reveal
+    window.addEventListener("load", () => {
+      const image = document.getElementById("image");
+      const text = document.getElementById("text");
+
+      setTimeout(() => {
+        image.classList.add("show");
+      }, 800);
+
+      setTimeout(() => {
+        text.classList.add("show");
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
